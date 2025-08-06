@@ -1,64 +1,53 @@
-<<<<<<< HEAD
-# Data Cleaning & Preprocessing
+## 🧰 Tools Used
+- Python
+- Pandas
+- Matplotlib
+- Seaborn
+- Plotly (optional)
 
-This Jupyter Notebook (`data_cleaning_preprocessing.ipynb`) demonstrates the process of cleaning and preprocessing a dataset (e.g., Titanic dataset) for machine learning tasks.
+---
 
-## Steps Covered
+## 📂 Dataset
+The dataset used is the **Titanic dataset**, which contains information about passengers on the Titanic, including whether they survived or not.
 
-1. **Importing Libraries**  
-   Uses pandas, numpy, matplotlib, seaborn, and scikit-learn.
+Key columns include:
+- `survived`: Survival status (0 = No, 1 = Yes)
+- `pclass`: Passenger class
+- `sex`: Gender
+- `age`: Age in years
+- `sibsp`: Number of siblings/spouses aboard
+- `parch`: Number of parents/children aboard
+- `fare`: Ticket fare
+- `embarked`: Port of Embarkation
 
-2. **Loading Data**  
-   Reads the dataset from `dataset.csv`.
+---
 
-3. **Exploratory Data Analysis**  
-   - Displays basic info and statistics.
-   - Checks for missing values.
+## 📈 Exploratory Data Analysis Steps
 
-4. **Handling Missing Values**  
-   - Fills missing `Age` values with the mean.
-   - Fills missing `Embarked` values with the mode.
-   - Drops the `Cabin` column.
+### 1. **Summary Statistics**
+- Computed mean, median, mode, standard deviation, etc.
+- Checked missing values.
 
-5. **Feature Engineering**  
-   - Identifies categorical and numerical features.
-   - Encodes categorical features (`Sex`, `Embarked`) using `LabelEncoder`.
-   - Drops unnecessary columns (`Ticket`, `Name`).
+### 2. **Univariate Analysis**
+- Histograms and boxplots for numerical features (`age`, `fare`, etc.)
+- Count plots for categorical features (`sex`, `pclass`, `embarked`)
 
-6. **Feature Scaling**  
-   - Scales numerical features using `StandardScaler`.
+### 3. **Multivariate Analysis**
+- Correlation matrix and heatmap.
+- Pairplot to analyze relationships between multiple variables.
+- Violin and swarm plots to explore survival patterns.
 
-7. **Visualization**  
-   - Plots boxplots for numerical features to visualize distributions and outliers.
+### 4. **Pattern Recognition**
+- Observed survival rate trends by gender and class.
+- Identified outliers and anomalies in age and fare.
 
-## Requirements
+### 5. **Feature Inference**
+- Gender and class significantly impacted survival chances.
+- First-class female passengers had the highest survival rate.
 
-- Python 3.x
-- Jupyter Notebook
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- scikit-learn
+---
 
-Install dependencies with:
-```sh
-pip install pandas numpy matplotlib seaborn scikit-learn
-```
-
-## Usage
-
-1. Place your dataset as `dataset.csv` in the same directory.
-2. Open and run the notebook in Jupyter:
-   ```sh
-   jupyter notebook data_cleaning_preprocessing.ipynb
-   ```
-3. Follow the cells step by step for data cleaning and preprocessing.
-
-## Notes
-
-- Adjust column names and preprocessing steps as needed for your specific dataset.
-- The notebook is designed for educational and prototyping
-=======
-# data_cleaning_processing
->>>>>>> 54cb7ee34bcc0de037e0470038e55a9acb1c4539
+## 💡 Insights
+- Females had higher survival rates than males.
+- Passengers in 1st class had higher survival rates than those in 2nd or 3rd class.
+- Children (younger age group) had a higher chance of survival.# data_visualization

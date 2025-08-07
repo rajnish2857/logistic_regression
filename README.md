@@ -1,53 +1,49 @@
-## 🧰 Tools Used
-- Python
-- Pandas
-- Matplotlib
-- Seaborn
-- Plotly (optional)
+# Linear Regression Project
 
----
+This Jupyter Notebook (`linear_regression.ipynb`) demonstrates both simple and multiple linear regression using the scikit-learn library.
 
-## 📂 Dataset
-The dataset used is the **Titanic dataset**, which contains information about passengers on the Titanic, including whether they survived or not.
+## Contents
 
-Key columns include:
-- `survived`: Survival status (0 = No, 1 = Yes)
-- `pclass`: Passenger class
-- `sex`: Gender
-- `age`: Age in years
-- `sibsp`: Number of siblings/spouses aboard
-- `parch`: Number of parents/children aboard
-- `fare`: Ticket fare
-- `embarked`: Port of Embarkation
+- **Data Loading & Exploration:**  
+  Loads `dataset.csv`, checks for missing values, and explores basic statistics.
 
----
+- **Simple Linear Regression:**  
+  - Predicts `price` using `area` as the feature.
+  - Splits data into training and test sets.
+  - Standardizes the feature.
+  - Fits a linear regression model.
+  - Visualizes the regression line.
+  - Evaluates performance using MAE, MSE, RMSE, and R² score.
 
-## 📈 Exploratory Data Analysis Steps
+- **Multiple Linear Regression:**  
+  - Uses `area`, `bedrooms`, `bathrooms`, and `stories` as features to predict `price`.
+  - Splits and standardizes data.
+  - Fits and evaluates the model.
+  - Visualizes predictions and residuals.
 
-### 1. **Summary Statistics**
-- Computed mean, median, mode, standard deviation, etc.
-- Checked missing values.
+## Requirements
 
-### 2. **Univariate Analysis**
-- Histograms and boxplots for numerical features (`age`, `fare`, etc.)
-- Count plots for categorical features (`sex`, `pclass`, `embarked`)
+- Python 3.x
+- Jupyter Notebook
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scikit-learn
 
-### 3. **Multivariate Analysis**
-- Correlation matrix and heatmap.
-- Pairplot to analyze relationships between multiple variables.
-- Violin and swarm plots to explore survival patterns.
+Install dependencies:
+```sh
+pip install pandas numpy matplotlib seaborn scikit-learn
+```
 
-### 4. **Pattern Recognition**
-- Observed survival rate trends by gender and class.
-- Identified outliers and anomalies in age and fare.
+## Usage
 
-### 5. **Feature Inference**
-- Gender and class significantly impacted survival chances.
-- First-class female passengers had the highest survival rate.
+1. Place `dataset.csv` in the project directory.
+2. Open and run `linear_regression.ipynb` in Jupyter Notebook or VS Code.
+3. Follow the notebook cells for step-by-step regression analysis.
 
----
+## Notes
 
-## 💡 Insights
-- Females had higher survival rates than males.
-- Passengers in 1st class had higher survival rates than those in 2nd or 3rd class.
-- Children (younger age group) had a higher chance of survival.# data_visualization
+- The notebook prints model coefficients and intercepts.
+- Performance metrics and plots help assess model accuracy.
+- You can modify features and target variables as needed for# linear_regression

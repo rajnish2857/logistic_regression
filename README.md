@@ -1,25 +1,25 @@
-# Linear Regression Project
+# Logistic Regression Classification
 
-This Jupyter Notebook (`linear_regression.ipynb`) demonstrates both simple and multiple linear regression using the scikit-learn library.
+This Jupyter Notebook (`logestic_reg.ipynb`) demonstrates binary classification using logistic regression with hyperparameter tuning and evaluation.
 
 ## Contents
 
-- **Data Loading & Exploration:**  
-  Loads `dataset.csv`, checks for missing values, and explores basic statistics.
+- **Synthetic Data Generation:**  
+  Uses `make_classification` from scikit-learn to create a binary classification dataset.
 
-- **Simple Linear Regression:**  
-  - Predicts `price` using `area` as the feature.
-  - Splits data into training and test sets.
-  - Standardizes the feature.
-  - Fits a linear regression model.
-  - Visualizes the regression line.
-  - Evaluates performance using MAE, MSE, RMSE, and R² score.
+- **Data Splitting:**  
+  Splits data into training and test sets.
 
-- **Multiple Linear Regression:**  
-  - Uses `area`, `bedrooms`, `bathrooms`, and `stories` as features to predict `price`.
-  - Splits and standardizes data.
-  - Fits and evaluates the model.
-  - Visualizes predictions and residuals.
+- **Model Building:**  
+  - Implements logistic regression.
+  - Performs hyperparameter tuning using `GridSearchCV` with cross-validation.
+
+- **Model Training & Evaluation:**  
+  - Trains the model with best parameters.
+  - Predicts test set labels.
+  - Evaluates accuracy, confusion matrix, and classification report.
+  - Computes ROC-AUC and plots ROC curve.
+  - Demonstrates threshold adjustment for classification.
 
 ## Requirements
 
@@ -38,12 +38,12 @@ pip install pandas numpy matplotlib seaborn scikit-learn
 
 ## Usage
 
-1. Place `dataset.csv` in the project directory.
-2. Open and run `linear_regression.ipynb` in Jupyter Notebook or VS Code.
-3. Follow the notebook cells for step-by-step regression analysis.
+1. Open `logestic_reg.ipynb` in Jupyter Notebook or VS Code.
+2. Run each cell step by step to generate data, train the model, and evaluate results.
 
 ## Notes
 
-- The notebook prints model coefficients and intercepts.
-- Performance metrics and plots help assess model accuracy.
-- You can modify features and target variables as needed for# linear_regression
+- The notebook uses synthetic data for demonstration.
+- Hyperparameter tuning is performed with multiple penalties, solvers, and regularization strengths.
+- Evaluation includes accuracy, confusion matrix, classification report, ROC-AUC, and ROC curve visualization.
+- You can adjust the classification threshold to see its effect
